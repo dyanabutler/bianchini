@@ -1,4 +1,3 @@
-
 {
   "compilerOptions": {
     "lib": [
@@ -12,7 +11,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "node", // change from "bundler" to "node"
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -28,9 +27,9 @@
       ]
     },
     "types": [
-      "@types/node",
-      "@types/react",
-      "@types/react-dom"
+      "node", // ensure node is included
+      "react",
+      "react-dom"
     ],
     "typeRoots": [
       "./node_modules/@types",
