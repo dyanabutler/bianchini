@@ -13,7 +13,7 @@ interface ImageData {
 }
 
 const images: ImageData[] = [
-  { src: 'https://ucarecdn.com/70efa2db-6798-455e-b721-89e2b6579a57/', alt: 'Artwork 1', title: 'Autumn Solace', description: 'Oil on Canvas', link: '/gallery/starry-night' },
+  { src: 'https://res.cloudinary.com/danimtxr1/image/upload/v1718160760/amethyst_5_vedvof.png', alt: 'Artwork 1', title: 'Amethyst', description: 'Silk on Acrylic on Canvas', link: '/gallery/amethyst' },
   { src: '/placeholder.svg', alt: 'Artwork 2', title: 'Serenity Bloom', description: 'Watercolor', link: '/gallery/serenity-bloom' },
   { src: '/placeholder.svg', alt: 'Artwork 3', title: 'Whispers of the Wind', description: 'Acrylic on Canvas', link: '/gallery/whispers-of-the-wind' },
   { src: '/placeholder.svg', alt: 'Artwork 4', title: 'Ethereal Landscapes', description: 'Watercolor', link: '/gallery/ethereal-landscapes' },

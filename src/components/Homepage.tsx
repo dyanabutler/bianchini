@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { FC } from 'react';
 import Hero2 from './Hero2';
+import VideoPlayer from './VideoPlayer';
 
 interface GalleryItem {
   src: string;
@@ -14,22 +15,20 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-  { src: '/placeholder.svg', alt: 'Artwork 1', link:'/gallery' },
-  { src: '/placeholder.svg', alt: 'Artwork 2', link:'/gallery' },
-  { src: '/placeholder.svg', alt: 'Artwork 3', link:'/gallery'},
-  { src: '/placeholder.svg', alt: 'Artwork 4', link:'/gallery' },
-  { src: '/placeholder.svg', alt: 'Artwork 5', link:'/gallery' },
-  { src: '/placeholder.svg', alt: 'Artwork 6', link:'/gallery' },
+  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 1', link:'/works' },
+  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 2', link:'/works' },
+  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 3', link:'/works'},
+
 ];
 
 const HomePage: FC = () => {
   return (
-    <div className="flex flex-col min-h-[100dvh]">
+    <div className="flex flex-col animate-fade-in min-h-[100dvh]">
     
       <main className="flex-1">
-        <section className="w-full">
+        <section className="w-full ">
           <Image
-            src="https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/"
+            src="https://res.cloudinary.com/danimtxr1/image/upload/v1718155908/golden_arteries4_Large_mo9vla.png"
             width={1920}
             height={1080}
             alt="Hero Image"
@@ -43,31 +42,39 @@ const HomePage: FC = () => {
                 a window into my soul, a reflection into yours
               </h1>
               <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                Discover the timeless beauty and craftsmanship of our artists unique creations. Explore their journey
-                and passion for traditional art.
+                Discover the timeless beauty and craftsmanship of Bianchini&apos;s unique creations. Explore their journey and passion through their mixed media arts and maybe you might find a piece of yourself within them
               </p>
             </div>
+            
             <div className="space-y-4">
               <h2 className="text-xl font-bold">About the Artist</h2>
               <p className="text-gray-500 md:text-base/relaxed dark:text-gray-400">
-                John Doe is a renowned traditional artist with over 20 years of experience. His work is known for its
-                intricate details, vibrant colors, and timeless elegance. Inspired by the rich cultural heritage of his
-                homeland, John dedicates himself to preserving and sharing the beauty of traditional art.
+                Bianchini is traditional artist with over 20 years of experience. Her work is known for its
+                use of silk fabrics, vibrant colors, and timeless elegance. Inspired by the rich cultural heritage of her
+                homeland and her connection to nature, Bianchini dedicates herself to preserving and sharing the beauty of traditional art while adding a fresh splash of silk to it.
               </p>
             </div>
+            
           </div>
+        </section>
+        <section>
+        <div className="w-full flex justify-center py-4">
+                <div className="w-full max-w-full mx-24 mb-20 aspect-video">
+                  <VideoPlayer />
+                </div>
+              </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6 space-y-8">
-            {/* <div className="text-center space-y-4">
+             <div className="text-center space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Gallery</h2>
               <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
                 Explore the stunning collection of traditional artwork created by our talented artist.
               </p>
-            </div> */}
+            </div> 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {galleryItems.map((item, index) => (
-                <Link key={index} href="#" className="relative group overflow-hidden rounded-lg" prefetch={false}>
+                <Link key={index} href="/works" className="relative group overflow-hidden rounded-lg" >
                   <Image
                     src={item.src}
                     width={600}

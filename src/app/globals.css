@@ -2,3 +2,14 @@
   @tailwind components;
   @tailwind utilities;
   
+  /* styles/globals.css */
+@font-face {
+  font-family: 'Sequoia';
+  src: url('/fonts/Sequoia.otf') format('opentype');
+  font-weight: bold;
+  font-style: bold;
+}
+
+body {
+  font-family: 'Sequoia', sans-serif;
+}

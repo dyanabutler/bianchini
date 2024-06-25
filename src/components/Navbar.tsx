@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet"
 import { FC, SVGProps } from 'react'
+import FancyButton from "./FancyButton"
 
 interface NavLink {
   href: string;
@@ -10,17 +11,17 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { href: "/home", label: "Home" },
-  { href: "/works", label: "View My Works" },
-  { href: "/about", label: "Meet the Artist" },
+  { href: "/home", label: "HOME" },
+  { href: "/works", label: "VIEW GALLERY" },
+  { href: "/about", label: "MEET THE ARTIST" },
   
 ];
 
 const HeaderComponent: FC = () => {
   return (
     <header className="px-4 lg:px-6 h-16 flex items-center sticky top-0 bg-white bg-opacity-75 justify-between">
-      <Link href="#" className="flex items-center gap-2">
-        <MountainIcon className="h-6 w-6" />
+      <Link href="/home" className="flex items-center gap-2">
+        {/* <MountainIcon className="h-6 w-6" /> */}
         <span className="font-semibold tracking-tighter">B I A N C H I N I</span>
       </Link>
       <nav className="hidden lg:flex gap-6">
@@ -28,7 +29,7 @@ const HeaderComponent: FC = () => {
           <Link
             key={index}
             href={link.href}
-            className="relative group text-sm font-medium hover:text-gray-900 dark:hover:text-gray-50 transition-colors"
+            className="relative group text-sm hover:text-gray-900 dark:hover:text-gray-50 transition-colors"
           >
             <span className="relative z-10">{link.label}</span>
             <span className="absolute bottom-0 left-0 h-0.5 w-full bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300 dark:bg-gray-50" />
@@ -36,9 +37,9 @@ const HeaderComponent: FC = () => {
         ))}
       </nav>
       <div className="hidden lg:block">
-        <Link href="/redirect-to-ig-shop">
-          <Button>Visit Shop</Button>
-        </Link>
+        
+          <FancyButton text="VISIT SHOP" link="/redirect-to-ig-shop" />
+        
       </div>
       <Sheet>
         <SheetTrigger asChild>
@@ -54,9 +55,7 @@ const HeaderComponent: FC = () => {
                 {link.label}
               </Link>
             ))}
-            <Link href="/get-started" className="flex w-full items-center py-2 text-lg font-semibold">
-              Get Started
-            </Link>
+           
           </div>
         </SheetContent>
       </Sheet>

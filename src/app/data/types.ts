@@ -1,8 +1,13 @@
 // types.ts
+export interface MediaItem {
+  type: 'image' | 'video';
+  src: string;
+  alt?: string;
+}
 
 export interface GalleryItem {
+  
     id: string;
-    src: string;
     alt: string;
     title: string;
     artist: string;
@@ -14,4 +19,5 @@ export interface GalleryItem {
     value: string;
     location: string;
     shoplink: string;
+    media: MediaItem[];
   }

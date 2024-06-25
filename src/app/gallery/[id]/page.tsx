@@ -8,6 +8,8 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { CloudinaryContext, Video } from 'cloudinary-react';
+import FancyButton from '@/components/FancyButton';
 
 const GalleryItemPage: FC = () => {
   const { id } = useParams() as { id: string };
@@ -21,18 +23,31 @@ const GalleryItemPage: FC = () => {
     <div>
     
     <Navbar />
-    <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-      <Carousel className="mb-8">
+    <div className="max-w-6xl overflow-hidden mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <Carousel className="mb-8 mx-8">
         <CarouselContent>
-          <CarouselItem>
-            <Image
-              src={item.src}
-              width={800}
-              height={600}
-              alt={item.alt}
-              className="w-full h-[500px] object-cover rounded-lg"
-            />
-          </CarouselItem>
+          {item.media.map((media, index) => (
+            <CarouselItem key={index}>
+              {media.type === 'image' ? (
+                <Image
+                  src={media.src}
+                  width={800}
+                  height={600}
+                  alt={media.alt || 'Artwork'}
+                  className="w-full h-[500px] object-cover rounded-lg"
+                />
+              ) : (
+                <CloudinaryContext cloud_name="danimtxr1">
+                  <Video
+                    publicId={media.src}
+                    width="100%"
+                    controls
+                   
+                  />
+                </CloudinaryContext>
+              )}
+            </CarouselItem>
+          ))}
         </CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
@@ -43,26 +58,12 @@ const GalleryItemPage: FC = () => {
           <p className="text-gray-500 mb-4">by {item.artist}</p>
           <p className="text-lg mb-2">Medium: {item.medium}</p>
           <p className="text-lg mb-2">Size: {item.size}</p>
-          <p className="text-lg mb-2">Year: {item.year}</p>
-          <p className="text-gray-700 leading-relaxed">{item.description}</p>
+          <p className="text-gray-500">{item.description}</p>
+       
+          
         </div>
         <div className="flex flex-col justify-between">
-          <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
-            <h2 className="text-2xl font-bold mb-4">About the Artist</h2>
-            <div className="flex items-center mb-4">
-              <Avatar className="mr-4">
-                <Image src="/placeholder.svg" alt={item.artist} width={40} height={40} />
-                <AvatarFallback>{item.artist.split(' ').map(name => name[0]).join('')}</AvatarFallback>
-              </Avatar>
-              <div>
-                <h3 className="text-lg font-bold">{item.artist}</h3>
-                <p className="text-gray-500">Artist details here</p>
-              </div>
-            </div>
-            <p className="text-gray-700 leading-relaxed">
-              Additional information about the artist can be added here.
-            </p>
-          </div>
+          
           <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg">
             <h2 className="text-2xl font-bold mb-4">Additional Information</h2>
             <div className="grid grid-cols-2 gap-4">
@@ -85,12 +86,10 @@ const GalleryItemPage: FC = () => {
             </div>
           </div>
           <div className="mt-6">
-            <a
-              href={item.shoplink}
-              className="inline-block px-6 py-2 text-base font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
-            >
-              Buy Now
-            </a>
+            <FancyButton
+              link={item.shoplink}
+              text="Buy Now"
+            />
           </div>
         </div>
       </div>

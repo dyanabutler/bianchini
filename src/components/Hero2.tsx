@@ -7,7 +7,7 @@ const Component: FC = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 md:p-8">
       <div className="rounded-lg overflow-hidden">
         <Image
-          src="/placeholder.svg"
+          src="https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/"
           alt="Artist's Artwork"
           width={500}
           height={500}
