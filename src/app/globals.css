@@ -1,15 +1,11 @@
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
   
-  /* styles/globals.css */
-@font-face {
-  font-family: 'Sequoia';
-  src: url('/fonts/Sequoia.otf') format('opentype');
-  font-weight: bold;
-  font-style: bold;
-}
+/* styles/globals.css */
+
 
 body {
   font-family: 'Sequoia', sans-serif;
+  font-family: 'BonaNova', sans serif;
 }

@@ -25,79 +25,59 @@ const quickLinks: QuickLink[] = [
 
 
 const Footer: FC = () => {
-    return (
-      <footer className="bg-gray-100 py-12 dark:bg-gray-800">
-        <div className="container max-w-5xl px-4 md:px-6">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Quick Links</h3>
-              <nav className="grid gap-2">
-                {quickLinks.map((link, index) => (
-                  <Link 
-                    key={index} 
-                    href={link.href} 
-                    className="relative group text-sm font-medium hover:text-gray-900 dark:hover:text-gray-50 transition-colors"
-                  >
-                    <span className="relative z-10">{link.label}</span>
-                    <span className="absolute bottom-0 left-0 h-0.5 w-full bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300 dark:bg-gray-50" />
-                  </Link>
-                ))}
-              </nav>
+  return (
+    <footer className="bg-gray-100 py-12 dark:bg-gray-800">
+      <div className="container max-w-5xl px-4 md:px-6">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <nav className="grid gap-2">
+              {quickLinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className="relative group text-sm font-medium hover:text-gray-900 dark:hover:text-gray-50 transition-colors"
+                >
+                  <span className="relative z-10">{link.label}</span>
+                  <span className="absolute bottom-0 left-0 h-0.5 w-full bg-gray-900 scale-x-0 group-hover:scale-x-100 transition-transform ease-in-out duration-300 dark:bg-gray-50" />
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Follow Me</h3>
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((link, index) => (
+                <Link key={index} href={link.href} aria-label={link.label} className="hover:text-red-700 text-gray-500 dark:text-gray-400 transition-colors duration-200">
+                  <link.icon className="h-6 w-6" />
+                </Link>
+              ))}
             </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Follow Me</h3>
-              <div className="flex items-center space-x-4">
-                {socialLinks.map((link, index) => (
-                  <Link key={index} href={link.href} aria-label={link.label} className="hover:text-red-700 text-gray-500 dark:text-gray-400 transition-colors duration-200">
-                    <link.icon className="h-6 w-6" />
-                  </Link>
-                ))}
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Contact Me</h3>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-500 dark:text-gray-300">
-                      Name
-                    </label>
-                    <Input id="name" placeholder="Enter your name" />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                      Email
-                    </label>
-                    <Input id="email" type="email" placeholder="Enter your email" />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Message
-                  </label>
-                  <Textarea id="message" placeholder="Enter your message" className="min-h-[120px]" />
-                </div>
-                <Button type="submit" className="w-full">
-                  Send Message
-                </Button>
-              </form>
+          </div>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Contact Me</h3>
+            <div>
+              <a href="mailto:bianchini.arts@gmail.com" className="inline-block px-4 py-2 text-center bg-transparent border border-black text-black rounded hover:bg-indigo-600 hover:text-white transition-colors w-full">
+                Send Email
+              </a>
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-2 sm:flex-row py-2 w-full shrink-0 items-center mt-4 px-4 md:px-4 border-t">
-          <p className="text-xs text-gray-500 dark:text-gray-400">&copy; 2024 Bianchini Arts. All rights reserved.</p>
-          <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-            <Link href="/termsofservice" className="text-xs hover:underline underline-offset-4">
-              Terms of Service
-            </Link>
-            <Link href="/privacypolicy" className="text-xs hover:underline underline-offset-4">
-              Privacy
-            </Link>
-          </nav>
-        </div>
-      </footer>
-    )
-  }
+      </div>
+      <div className="flex flex-col gap-2 sm:flex-row py-2 w-full shrink-0 items-center mt-4 px-4 md:px-4 border-t">
+        <p className="text-xs text-gray-500 dark:text-gray-400">&copy; 2024 Bianchini Arts. All rights reserved.</p>
+        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
+          <Link href="https://www.dyanabutler.com/" className="text-xs hover:underline underline-offset-4 text-gray-500">
+            Powered by dyanabutler.com
+          </Link>
+          {/* <Link href="/privacypolicy" className="text-xs hover:underline underline-offset-4">
+            Privacy
+          </Link> */}
+        </nav>
+      </div>
+    </footer>
+  );
+};
   
  
 

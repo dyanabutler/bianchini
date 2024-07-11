@@ -19,9 +19,10 @@ const config = {
     },
     extend: {
       
-        fontFamily: {
-          sequoia: ['Sequoia', 'sans-serif'],
-        },
+      fontFamily: {
+        bonanova: ['BonaNovaSC', 'sans-serif'],
+        sequoia: ['Sequoia', 'sans-serif'],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

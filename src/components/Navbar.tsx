@@ -12,8 +12,8 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { href: "/home", label: "HOME" },
-  { href: "/works", label: "VIEW GALLERY" },
-  { href: "/about", label: "MEET THE ARTIST" },
+  { href: "/works", label: "GALLERY" },
+  { href: "/about", label: "ABOUT" },
   
 ];
 
@@ -22,7 +22,7 @@ const HeaderComponent: FC = () => {
     <header className="px-4 lg:px-6 h-16 flex items-center sticky top-0 bg-white bg-opacity-75 justify-between">
       <Link href="/home" className="flex items-center gap-2">
         {/* <MountainIcon className="h-6 w-6" /> */}
-        <span className="font-semibold tracking-tighter">B I A N C H I N I</span>
+        <span className="font-sequoia font-semibold tracking-tighter">B I A N C H I N I</span>
       </Link>
       <nav className="hidden lg:flex gap-6">
         {navLinks.map((link, index) => (

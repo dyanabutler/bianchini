@@ -15,9 +15,9 @@ interface GalleryItem {
 }
 
 const galleryItems: GalleryItem[] = [
-  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 1', link:'/works' },
-  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 2', link:'/works' },
-  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 3', link:'/works'},
+  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 1', link:'/gallery/pathway-of-roots' },
+  { src: 'https://ucarecdn.com/bccd9f48-8920-40e8-b3d1-022b9c1bffd0/-/preview/750x1000/', alt: 'Artwork 2', link:'/gallery/dune' },
+  { src: 'https://ucarecdn.com/7883377b-755d-4092-9995-1842b182c22e/-/preview/750x1000/', alt: 'Artwork 3', link:'/gallery/mother-catching-her-fallen-son'},
 
 ];
 
@@ -38,17 +38,16 @@ const HomePage: FC = () => {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="space-y-4">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h1 className=" font-sequoia text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 a window into my soul, a reflection into yours
               </h1>
-              <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                Discover the timeless beauty and craftsmanship of Bianchini&apos;s unique creations. Explore their journey and passion through their mixed media arts and maybe you might find a piece of yourself within them
-              </p>
+              {/* <p className="font-bonanova text-gray-500 md:text-xl/relaxed dark:text-gray-400">
+              Unveil the timeless beauty of Bianchini&apos;s craft. Journey through their mixed media art, where passion unfolds—and perhaps, find a piece of yourself within.              </p> */}
             </div>
             
             <div className="space-y-4">
-              <h2 className="text-xl font-bold">About the Artist</h2>
-              <p className="text-gray-500 md:text-base/relaxed dark:text-gray-400">
+              <h2 className=" font-sequoia text-xl font-bold">about the artist</h2>
+              <p className="font-bonanova text-gray-500 md:text-base/relaxed dark:text-gray-400">
                 Bianchini is traditional artist with over 20 years of experience. Her work is known for its
                 use of silk fabrics, vibrant colors, and timeless elegance. Inspired by the rich cultural heritage of her
                 homeland and her connection to nature, Bianchini dedicates herself to preserving and sharing the beauty of traditional art while adding a fresh splash of silk to it.
@@ -67,10 +66,10 @@ const HomePage: FC = () => {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6 space-y-8">
              <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Gallery</h2>
-              <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
+              <h2 className="font-sequoia text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">what do you see?</h2>
+              {/* <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
                 Explore the stunning collection of traditional artwork created by our talented artist.
-              </p>
+              </p> */}
             </div> 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {galleryItems.map((item, index) => (

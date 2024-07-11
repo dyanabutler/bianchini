@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +14,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sequoia"> 
+      <Head>
+        <style>
+          {`
+            @font-face {
+              font-family: 'BonaNovaSC';
+              src: url('/fonts/BonaNovaSC-Regular.ttf') format('truetype');
+              font-weight: normal;
+              font-style: normal;
+            }
+
+            @font-face {
+              font-family: 'Sequoia';
+              src: url('/fonts/Sequoia.otf') format('opentype');
+              font-weight: normal;
+              font-style: normal;
+            }
+          `}
+        </style>
+      </Head>
+      <body className="">
         {children}
       </body>
     </html>

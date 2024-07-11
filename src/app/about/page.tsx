@@ -9,8 +9,8 @@ const About: FC = () => {
   return (
     <div>
         <Navbar /> 
-    <div className="flex flex-col min-h-[100dvh]">
-      <section className="w-full pt-12 md:pt-24 lg:pt-32 border-b">
+    <div className="flex flex-col min-h-[50dvh]">
+      {/* <section className="w-full pt-12 md:pt-24 lg:pt-32 border-b">
         <div className="container px-4 md:px-6 space-y-10 xl:space-y-16">
           <div className="grid gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16">
             <div>
@@ -33,14 +33,14 @@ const About: FC = () => {
             </div>
           </div>
         </div>
-      </section>
-      <Brands />
+      </section> */}
+      {/* <Brands /> */}
       <main className="flex-1">
         <section className="w-full bg-white py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="mx-auto max-w-[800px] space-y-6">
+            <div className="mx-auto max-w-[800px] space-y-6 font-bonanova">
               <div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About the Artist</h2>
+                <h2 className="font-sequoia text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">From the Artist:</h2>
               </div>
               <div className="space-y-4">
                 <p className="text-gray-500 dark:text-gray-400">

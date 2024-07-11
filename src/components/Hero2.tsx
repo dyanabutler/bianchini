@@ -7,7 +7,7 @@ const Component: FC = () => {
     <section className="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 md:p-8">
       <div className="rounded-lg overflow-hidden">
         <Image
-          src="https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/"
+          src="https://ucarecdn.com/e753b372-e477-48df-9fdf-947c82b4083f/-/preview/1000x750/"
           alt="Artist's Artwork"
           width={500}
           height={500}
@@ -15,16 +15,13 @@ const Component: FC = () => {
         />
       </div>
       <div className="flex flex-col justify-center space-y-4">
-        <h2 className="text-3xl font-bold">Vibrant Expressions</h2>
+        <h2 className="font-sequoia text-3xl font-bold">Hidden Expressions</h2>
         <p className="text-gray-500 dark:text-gray-400">
-          Explore the captivating artwork of Jane Doe, a renowned artist known for her bold use of color and dynamic
-          compositions. Her paintings invite you to immerse yourself in a world of vibrant emotions and boundless
-          creativity.
-        </p>
-        <div className="flex items-center space-x-2">
+        Lose yourself in Bianchini&apos;s art, where bold hues and silks craft unique tails for any eyes who wonder upon it.        </p>
+        {/* <div className="flex items-center space-x-2">
           <UserIcon className="w-6 h-6 text-gray-500 dark:text-gray-400" />
           <span className="text-gray-500 dark:text-gray-400">Jane Doe</span>
-        </div>
+        </div> */}
       </div>
     </section>
   );

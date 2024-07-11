@@ -13,12 +13,12 @@ interface ImageData {
 }
 
 const images: ImageData[] = [
-  { src: 'https://res.cloudinary.com/danimtxr1/image/upload/v1718160760/amethyst_5_vedvof.png', alt: 'Artwork 1', title: 'Amethyst', description: 'Silk on Acrylic on Canvas', link: '/gallery/amethyst' },
-  { src: '/placeholder.svg', alt: 'Artwork 2', title: 'Serenity Bloom', description: 'Watercolor', link: '/gallery/serenity-bloom' },
-  { src: '/placeholder.svg', alt: 'Artwork 3', title: 'Whispers of the Wind', description: 'Acrylic on Canvas', link: '/gallery/whispers-of-the-wind' },
-  { src: '/placeholder.svg', alt: 'Artwork 4', title: 'Ethereal Landscapes', description: 'Watercolor', link: '/gallery/ethereal-landscapes' },
-  { src: '/placeholder.svg', alt: 'Artwork 5', title: 'Timeless Reflections', description: 'Oil on Canvas', link: '/gallery/timeless-reflections' },
-  { src: '/placeholder.svg', alt: 'Artwork 6', title: 'Enchanted Moments', description: 'Acrylic on Canvas', link: '/gallery/enchanted-moments' }
+  { src: 'https://ucarecdn.com/f2d246b3-827b-4a95-9596-e86c52992d53/-/preview/1000x750/', alt: 'Artwork 1', title: 'Amethyst', description: 'SOLD', link: '/gallery/amethyst' },
+  { src: 'https://ucarecdn.com/7883377b-755d-4092-9995-1842b182c22e/-/preview/750x1000/', alt: 'Artwork 2', title: 'Mother Catching Her Fallen Son', description: 'Open for Offers', link: '/gallery/mother-catching-her-fallen-son' },
+  { src: 'https://ucarecdn.com/e753b372-e477-48df-9fdf-947c82b4083f/-/preview/1000x750/', alt: 'Artwork 3', title: 'Allknowing Unknown', description: 'Open for Offers', link: '/gallery/allknowing-unknown' },
+  { src: 'https://ucarecdn.com/35800b66-11eb-452c-ac8b-6054c1b58f8c/-/preview/1000x750/', alt: 'Artwork 4', title: 'Pathway of Roots', description: 'Open for Offers', link: '/gallery/pathway-of-roots' },
+  { src: 'https://ucarecdn.com/bccd9f48-8920-40e8-b3d1-022b9c1bffd0/-/preview/750x1000/', alt: 'Artwork 5', title: 'Dune', description: 'Open for Offers', link: '/gallery/dune' },
+  { src: 'https://ucarecdn.com/75a7a509-41c5-4142-8084-c662aedaecf0/-/preview/750x1000/', alt: 'Artwork 6', title: 'Golden Arteries', description: 'Open for Offers', link: '/gallery/golden-arteries' }
 ];
 
 const ImageGallery: FC = () => {
@@ -27,12 +27,12 @@ const ImageGallery: FC = () => {
      
       <main className="flex-1 py-12 md:py-16 lg:py-20">
         <div className="container px-4 md:px-6 grid gap-12 lg:gap-16">
-          <section className="grid gap-6 lg:gap-8">
+          <section className="font-sequoia grid gap-6 lg:gap-8">
             <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              a window into my soul
+              a window into my soul, a reflection of yours
             </h1>
-            <p className="max-w-[700px] text-gray-500 md:text-xl lg:text-lg xl:text-xl">
-              a reflection of yours
+            <p className="max-w-[700px] font-bonanova text-gray-500 md:text-xl lg:text-lg xl:text-xl">
+              The Shop is currently under construction, if you would like to know any details not shown about any of the pieces, send us an email below!
             </p>
           </section>
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
