@@ -57,8 +57,8 @@ const HomePage: FC = () => {
           </div>
         </section>
         <section>
-        <div className="w-full flex justify-center py-4">
-                <div className="w-full max-w-full mx-24 mb-20 aspect-video">
+        <div className="w-full flex justify-center py-4 ">
+                <div className="relative w-full  ">
                   <VideoPlayer />
                 </div>
               </div>
@@ -67,9 +67,9 @@ const HomePage: FC = () => {
           <div className="container px-4 md:px-6 space-y-8">
              <div className="text-center space-y-4">
               <h2 className="font-sequoia text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">what do you see?</h2>
-              {/* <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
-                Explore the stunning collection of traditional artwork created by our talented artist.
-              </p> */}
+              <p className="text-gray-500 md:text-xl/relaxed dark:text-gray-400">
+                click on any image to view the gallery
+              </p>
             </div> 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {galleryItems.map((item, index) => (
